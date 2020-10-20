@@ -49,7 +49,173 @@
     <br />
 
     <div class="container">
+        <h1 class="text-center">Setup a web server using docker</h1>
 
+        <br />
+        <br />
+
+        <p class="lead">
+
+            Click the following link to <a href="https://docs.docker.com/get-docker/">download docker</a> and follow the
+            instructions to download and install
+            docker desktop in your local machine. This installation includes <mark>Docker Engine, Docker CLI client,
+                Docker
+                Compose etc.</mark>
+
+        </p>
+        <p class="lead">
+            After docker desktop is installed, open the <mark>prompt/terminal </mark> and enter the command
+            <mark>‘docker -v’</mark>. If the docker version is displayed as shown below that means the installation
+            was successful.
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_1.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Download the ubuntu docker image from docker hub, a public docker registry using the command <mark>‘docker pull
+            ubuntu:latest’.</mark> We will be using <mark>ubuntu</mark> as the operating system to host our web server. As you can see
+            <mark>‘ubuntu’</mark> is the name of the image and <mark>‘latest’</mark> is the tag.
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_2.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Enter the command <mark>‘docker images’</mark> to see the list of docker images in your local machine
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_3.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Run the ubuntu container and login to the container using the following command
+        </p>
+
+        <p class="lead">
+            <mark>docker run -it ubuntu:latest /bin/bash</mark>
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_4.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            One you login to the container update ubuntu using the command <mark>‘apt-get update’</mark>
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_5.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Install the web server apache2 in the ubuntu container using the following command
+        </p>
+
+        <p class="lead">
+        <mark>apt-get install apache2</mark>
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_6.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Install the command line text editor <mark>nano</mark> by running the command
+        </p>
+
+        <p class="lead">
+        <mark>apt-get install nano</mark>
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_7.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Exit the container by entering the command <mark>‘exit’</mark>
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_8.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Create a new docker image from the ubuntu image using <mark>“docker commit”</mark> command
+
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_9.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            If you enter <mark>‘docker images’</mark> you will be able to see the new image <mark>‘ubuntu_apache2’</mark>
+
+
+        </p>
+
+        <div class="text-center">
+            <img src="images/server_10.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Bind a host directory to the container using the following command.
+        </p>
+
+        <p class="lead">
+        <mark>docker run -it -p 127.0.0.1:80:80 -v /Users/jessy/webapp:/var/www/html ubuntu_apache2 /bin/bash</mark>
+        </p>
+
+        <p class="lead">
+        <mark>/Users/jessy/webapp</mark> is the host directory and <mark>/var/www/html</mark> is the directory in the container
+        </p>
+
+
+        <div class="text-center">
+            <img src="images/server_11.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Create a new html file in the directory <mark>/var/www/html</mark> using the command <mark>‘nano index.html’</mark>.
+        </p>
+        <p class="lead">
+            Write a simple html page
+        </p>
+        <div class="text-center">
+            <img src="images/server_12.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Use <mark>CTRL+X</mark> and then press <mark>‘Y’</mark> to save the <mark>index.html</mark> file
+        </p>
+        <p class="lead">
+            Start the apache server by entering <mark>‘/etc/init.d/apache2 restart’</mark>
+        </p>
+        <div class="text-center">
+            <img src="images/server_13.png" class="col-8" alt="Responsive image">
+        </div>
+        <p class="lead">
+            Open a browser and go to the url <mark>‘127.0.0.1’</mark> and you should be able to see the html page you created
+        </p>
+
+
+        <div class="text-center">
+            <img src="images/server_14.png" class="col-8" alt="Responsive image">
+        </div>
+
+
+        <p class="lead">
+            Go to the location <mark>/User/jessy/webapp</mark> in your local machine and you should see the index.html there
+        </p>
+
+
+        <div class="text-center">
+            <img src="images/server_15.png" class="col-8" alt="Responsive image">
+        </div>
     </div>
 
 
