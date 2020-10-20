@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>How the Internet Works</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Docker Website</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Introduction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="virtualization.html">Virtualization</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="containerization.html">Containerization</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="comparison.html">Virtualization vs Containerization</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="webserver.html">Web Server using Docker</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="linux.html">Linux Commands</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pycharm.html">Docker and Pycharm</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br />
+
+  <div class="container justify-content-center">
+    <h1 class="text-center">Difference between Virtualization and Containerization.</h1>
+
+   
+
+<p>Containerization and Virtualization differ in many ways, but the primary difference is that containers provide a way to virtualize an OS to run multiple workloads in a single OS instance. With VMs, the hardware is virtualized to run multiple OS instances. The speed, agility, and portability of the container make it another tool to streamline software development.
+</p>
+
+<ul>
+  <li>The advantage of multiple copies:</li>
+  <li>Scaling related workloads:</li>
+  <li>Foundation for running an application:</li>
+</ul>
+<p>Hypervisors can sit on top of an operating system (like on a laptop) or be installed directly onto hardware (like a server), which is how most enterprises virtualize. Hypervisors take your physical resources and divide them up so that virtual environments can use them.The virtual machine functions as a single data file. And like any digital file, it can be moved from one computer to another, opened in either one, and be expected to work the same.</p>
+<h3> Difference:  </h3>
+<ul>
+  <li>Multiple OS can run at the same time: One of the major points that differentiate these two processes is containers’ temporary behavior. Many copies of a container can exist at the same time in a system like orchestration. If any containers failed, one can remove that and replace it, and there will be no change or impact on service. Older versions can exist at the same time with the new versions. Removal and replacement of the new versions can be done easily if any operation gets failed. </li>
+  <li>Easy recovery and maintenance in a condition of failure case: There is a vast difference between the scalability of a containerized workload and a virtual workload. The containers contain only those services which are basic in nature and which their functions require, but among those services, one can be a web server like Nginx and virtualization workload system, like cabernets, having the capability of judging that when there is a need of scaling out the number of containers based on the sequence of traffic follows and can copy the images of the container on its own and also remove them from the system.</li>
+  <li>Due to less usage/need for infrastructure total cost of ownership came down: There is a vast difference between the scalability of a containerized workload and a virtual workload. The containers contain only those services which are basic in nature and which their functions require, but among those services, one can be a web server like Nginx and virtualization workload system, like cabernets, having the capability of judging that when there is a need of scaling out the number of containers based on the sequence of traffic follows and can copy the images of the container on its own and also remove them from the system.</li>
+  <li>Using microservices architecture: Google firstly uses the architecture “microservices” and then by Netflix. One can operate these systems without excluding any single application. In the form of functions, they perform small workloads that may be contacted through API, and they perform different functions. These functions can be seen in traditional applications, although many applications can perform the same functions on repeat.</li>
+</ul>
+<br/>
+    <div class="text-center">
+        <img src="virtual2.jpg" width="300" height="300" class="" alt="Responsive image">
+    </div>
+    <br/>
+<p>In the above diagram, you can see there one host OS on which there are three guest OS systems running, which are VMs.
+Though Virtualization also has some shortcomings. Running multiple VMs at the same time on Host OS leads to performance breakdown/degradation.
+</p>   
+<h3> These are some Cons of Virtualization: 
+ </h3>
+<ul>
+  <li>Unstable performance because of running multiple VMs.</li>
+  <li>The efficiency of Hypervisors is not as good as the host OS.</li>
+  <li>Long boot-up time.s</li>
+</ul>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
