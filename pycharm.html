@@ -49,7 +49,101 @@
     <br />
 
     <div class="container">
+        <h1 class="text-center">How to connect Docker with Pycharm to write python code</h1>
+        <br/>
+        <br/>
 
+        <p class="lead">
+            Open Pycharm and go to <mark>‘Preferences->Build Execution and Deployment->Docker’</mark>
+        </p>
+        <p class="lead">
+            Click on <mark>‘+’</mark> to add a new docker connection
+        </p>
+
+        <p class="lead">
+            Click <mark>‘OK’</mark> to exit the window
+        </p>
+        <div class="text-center">
+            <img src="images/pycharm_1.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Create a new <mark>'Pure Python'</mark> project in Pycharm
+        </p>
+
+        <div class="text-center">
+            <img src="images/pycharm_2.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            After opening the project in Pycharm you should be able to see the docker connection in the <mark>‘Services’</mark>
+            window.
+        </p>
+        <p class="lead">
+            Click on the <mark>'Connect'</mark> button to connect to docker.
+        </p>
+        <p class="lead">
+            You will be able to see all the images and containers in the local machine.
+        </p>
+
+        <div class="text-center">
+            <img src="images/pycharm_3.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Add a <mark>Dockerfile</mark> to the project with following information
+        </p>
+        <p class="lead">
+        <mark>FROM python:3</mark>
+        </p>
+
+        <p class="lead">
+
+        <mark>ADD main.py /</mark>
+        </p>
+
+        <p class="lead">
+
+        <mark>CMD [ "python", "./main.py" ]</mark>
+        </p>
+        <div class="text-center">
+            <img src="images/pycharm_4.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Click on the button on the top left corner of the Docker File and select <mark>‘Build Image for Docker’</mark> to build
+            an image from this Dockerfile.
+        </p>
+
+        <div class="text-center">
+            <img src="images/pycharm_5.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            You can see the new image in services window .
+        </p>
+
+        <div class="text-center">
+            <img src="images/pycharm_6.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Once the build is complete click on <mark>‘Run Dockerfile’</mark> .
+        </p>
+
+        <div class="text-center">
+            <img src="images/pycharm_7.png" class="col-8" alt="Responsive image">
+        </div>
+
+        <p class="lead">
+            Go to the Attached Console and you should be able to see the output from the python code in <mark>main.py</mark> file
+        </p>
+
+
+        <div class="text-center">
+            <img src="images/pycharm_8.png" class="col-8" alt="Responsive image">
+        </div>
+        
     </div>
 
 
